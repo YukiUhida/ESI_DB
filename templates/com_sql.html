@@ -1,0 +1,15 @@
+<a href="{% url 'download_csv' %}">CSVファイルをダウンロード</a>
+
+ 
+
+
+{% for result in results %}
+    <ul>
+    <li><a href="{%url 'comdetail' result.0%}">化合物名:{{ result.1}}</a></li>
+    <li>SMILES:{{ result.2 }}</li>
+    <li>分子量:{{ result.3 }}</li>
+    <li>PubchemCID:{{ result.4 }}</li>
+    </ul>
+    
+
+{% endfor %}

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block side %}
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'what_esi' %}">whats's ESI?</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'definition_esi' %}">Definition of ESI descriptor</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'esi_research' %}">Research using ESI descriptors</a>
+</li>
+{% endblock%}
+
+{% block content %}
+<!-- ページ固有のコンテンツ -->
+{% load static %}
+
+<div style="text-align: center;">
+    <h1>What's ESI?</h1>
+</div>
+<p style = "font-size: 25px;">　<span class="highlight">E</span>lectronic - <span class="highlight">S</span>ituation <span class="highlight">I</span>nformatics</p>
+<div style="margin-bottom: 5px;">
+        <!-- 空白 -->
+</div>
+<p style = "font-size: 25px;">　ESI is a method for predicting physical properties and searching for substances based <br>　on information on the electronic state characteristics of molecules.
+</p>
+<style>
+    .highlight {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+
+<div style="margin-bottom: 40px;">
+    <!-- 空白 -->
+</div>
+
+
+
+<div style="display: flex;">
+    <div class="image-container">
+        <img src="{% static '透過.png' %}" alt="画像" style="margin-right: 35px;">
+    </div>
+    
+    
+    <p style="margin-left: 15px; font-size: 20px; color: #dc143c;">
+        ここに説明文を書くここに説明文を書くここに説明文を書くここに説明文を書くここに説明文を書く
+    </p>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+<style>
+    .image-container img {
+        max-width: 95%;
+        height: auto;
+    }
+</style>
+
+<div style="margin-bottom: 80px;">
+    <!-- 空白 -->
+</div>
+
+<p>あああああああああああああああああああああ</p>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block side %}
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'what_esi' %}">whats's ESI?</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'definition_esi' %}">Definition of ESI descriptor</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'esi_research' %}">Research using ESI descriptors</a>
+</li>
+{% endblock%}
+{% block content %}
+<!-- ページ固有のコンテンツ -->
+{% load static %}
+
+<h1>Definition of ESI descriptor</h1>
+<div style="margin-bottom: 20px;">
+    <!-- 空白 -->
+</div> 
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Symbols</th>
+        <th>Descriptor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S(ρ<sub>UV</sub>)</td>
+        <td>Similarity in UV/vis spectra</td>
+      </tr>
+      <tr>
+        <td>S(ρ<sub>ex</sub>)</td>
+        <td>Similarity in density of electronically excited states (ρ<sub>ex</sub>)</td>
+      </tr>
+      <tr>
+        <td>S(ρ<sub>orb</sub>)</td>
+        <td>Similarity in density of molecular orbitals (ρ<sub>orb</sub>)</td>
+      </tr>
+      <tr>
+        <td>S(ρ<sub>IR</sub>)</td>
+        <td>Similarity in IR spectra (ρ<sub>IR</sub>)</td>
+      </tr>
+      <tr>
+        <td>S(ρ<sub>freq</sub>)</td>
+        <td>Similarity in density of vibrational states (ρ<sub>freq</sub>)</td>
+      </tr>
+      <tr>
+        <td>IP<sub>v</sub></td>
+        <td>Vertical ionization potential from S<sub>0</sub></td>
+      </tr>
+      <tr>
+        <td>λ<sub>S0→C</sub></td>
+        <td>Structural relaxation energy in C after ionization</td>
+      </tr>
+      <tr>
+        <td>λ<sub>C→S0</sub></td>
+        <td>Structural relaxation energy in S<sub>0</sub> after deionization at C</td>
+      </tr>
+      <tr>
+        <td>EA<sub>v</sub></td>
+        <td>Vertical electron affinity from S<sub>0</sub></td>
+      </tr>
+      <tr>
+        <td>λ<sub>S0→A</sub></td>
+        <td>Structural relaxation energy in A after anionization (electron-attachment)</td> 
+      </tr>
+      <tr>
+        <td>λ<sub>A→S0</sub></td>
+        <td>Structural relaxation energy in S<sub>0</sub> after deionization at A</td>
+      </tr>
+      <tr>
+        <td>∆E<sub>ST,v</sub></td>
+        <td>Energy of vertical transition from S<sub>0</sub> to T<sub>1</sub></td>
+      </tr>
+      <tr>
+        <td>λ<sub>S0→T1</sub></td>
+        <td>Structural relaxation energy in T1 after transition from S<sub>0</sub></td>
+      </tr>
+      <tr>
+        <td>λ<sub>T1→S0</sub></td>
+        <td>Structural relaxation energy in T1 after transition from S<sub>0</sub></td>
+        
+      </tr>
+      <tr>
+        <td>∆E<sub>solv</sub></td>
+        <td>Solvation energy at the optimized geometry in vacuum of S<sub>0</sub></td>
+      </tr>
+      <tr>
+        <td>μ</td>
+        <td>Dipole moment of S<sub>0</sub></td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td>Molecular mass</td>
+      </tr>
+      <tr>
+        <td>V<sub>mol</sub></td>
+        <td>Molecular volume</td>
+      </tr>
+      <tr>
+        <td>B1(S<sub>0</sub>)</td>
+        <td>Length of the longest side of the cuboid box enclosing a S<sub>0</sub> molecule</td>
+      </tr>
+      <tr>
+        <td>B2(S<sub>0</sub>)</td>
+        <td>Length of the second longest side of the cuboid box enclosing a S<sub>0</sub> molecule</td>
+      </tr>
+      <tr>
+        <td>B3(S<sub>0</sub>)</td>
+        <td>Length of the shortest side of the cuboid box enclosing a S<sub>0</sub> molecule</td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+{% endblock %}

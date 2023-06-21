@@ -1,0 +1,69 @@
+
+{% extends 'base.html' %}
+
+{% block side %}
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'provide' %}">How to use</a>  
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'upload_esi' %}">Providing ESI descriptors</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'upload_rdkit' %}">Providing RDkit descriptors</a>  
+</li>
+
+
+{% endblock%}
+
+
+
+
+{% block content %}
+<!-- ページ固有のコンテンツ -->
+{% load static %}
+
+
+<div style="margin-bottom: 40px;">
+    <!-- 空白 -->
+</div>
+<h1>　How to use the descriptor providing system </h1>
+<div style="margin-bottom: 40px;">
+    <!-- 空白 -->
+</div>
+<style>
+    .image-container {
+      border: 1px solid black; /* 枠線のスタイルを指定 */
+      width: 300px; /* 画像の幅を指定 */
+    }
+    .image-container img {
+      max-width: 100%; /* 画像の最大幅を100%に設定し、親要素に合わせて縮小 */
+    }
+</style>
+
+
+<h3>STEP1. Presentation of SMILES information for molecules of interest</h3>
+<div style="margin-bottom: 20px;"></div>
+<p style="margin-left: 15px; font-size: 20px;">Read SMILES information in the uploaded CSV file and generate descriptor information for the corresponding molecule.</p>
+<div style="margin-bottom: 60px;"></div>
+
+<h3>STEP2. Presentation of SMILES information for molecules of interest</h3>
+<div style="margin-bottom: 20px;"></div>
+<p style="margin-left: 15px; font-size: 20px;">After uploading the file, press the button to access the download page.</p>
+<div style="margin-bottom: 60px;"></div>
+
+
+<h3>STEP3. Notes on uploading CSV files</h3>
+<div style="margin-bottom: 20px;"></div>
+<div style="display: flex;">
+    <div class="image-container">
+        <img src="{% static 'smiles_file.jpg' %}" alt="画像" style="margin-right: 15px;">
+    </div>
+    
+    
+    <p style="margin-left: 15px; font-size: 20px; color: #dc143c;">
+    
+    Write SMILES in the first column in the CSV file.</p>
+    
+  </div>
+
+{% endblock %}

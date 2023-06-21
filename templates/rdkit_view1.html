@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rdkit Descriptors</title>
+</head>
+<body>
+    <h1>Rdkit Descriptors</h1>
+    <!-- 結果を表示する -->
+    {% if rdkit_desc %}
+        <table>
+            <thead>
+                <tr>
+                    {% for column in rdkit_desc.columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for _, row in rdkit_desc.iterrows %}
+                    <tr>
+                        {% for value in row %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>
+
+

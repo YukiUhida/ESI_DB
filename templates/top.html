@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>ESIDatabase</title>
+</head>
+<body style="background-color: #f0fff0;">
+    <!-- 共通のヘッダ -->
+    
+    <header>
+        
+        <div class="container">
+            <!-- Content here -->
+            <div style="background-color: #00CC99; color: #FFFFFF;">
+                <div class="inline-block">
+                    
+                    <h1 id="top">　ESI Database</h1><a>　　</a>
+                    <a href="{% url 'top' %}"><p style="font-size: 20px;">TOPページ></p></a><p>　　[</p>
+                    <a href="{% url 'what_esi' %}">What's ESI?</a><p>]　　[</p>
+                    <a href="{% url 'provide' %}">get descriptor</a><p>]　　[</p>
+                    <a href="{% url 'link_esi' %}">related links</a><p>]　　[</p>
+                    <a href="{% url 'past_question' %}">Q & A</a><p>]</p>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+
+    <!-- 共通のナビゲーションバー -->
+    <!--
+    <nav>
+        <ul>
+            <li><a href="#">リンク1</a></li>
+            <li><a href="#">リンク2</a></li>
+            <li><a href="#">リンク3</a></li>
+        </ul>
+    </nav>
+    -->
+
+    <div class="container">
+        
+        
+       
+    
+    <!-- 各ページ固有のコンテンツ -->
+        <div class="content" style="background-color: #FFFFFF;">
+            <div style="margin-bottom: 20px;">
+                <!-- 空白 -->
+            </div>
+            <div style="text-align: center;">
+                <h1>Welcome to ESI Database</h1>
+            </div>
+            <div style="margin-bottom: 40px;">
+                <!-- 空白 -->
+            </div>
+            <p style="font-size: 20px;">　　This website is a site that provides a unique descriptor "ESI descriptor" used for informatics using electronic computation.
+            </p>
+            <div style="margin-bottom: 40px;">
+                <!-- 空白 -->
+            </div>
+
+
+          
+            
+            <div style="text-align: center;">
+                <p style="font-size: 30px;" >Please access the following three pages <br> according to your purpose.
+                </p>
+            </div>
+            <div style="margin-bottom: 40px;">
+                <!-- 空白 -->
+            </div>
+
+            <!-- ここから -->
+            <div class="card-group">
+                <div class="card">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'what_esi' %}">Want to know ESI</a>
+                      </h5>
+                      
+                    <p class="card-text">In addition to the principles and definitions of ESI, there is also information on research using ESI.</p>
+                    
+                  </div>
+                </div>
+                <div class="card">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'provide' %}">Want to get descriptors</a>
+                      </h5>
+                    <p class="card-text">In addition to ESI descriptors, you can also get RDkit descriptors.</p>
+                    
+                  </div>
+                </div>
+                <div class="card">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'contact_form' %}">Want to ask questions</a>
+                      </h5>
+                    <p class="card-text" > We welcome questions about ESI and our website.</p>
+                    
+                  </div>
+                </div>
+              </div>
+            
+            <!-- ここまで -->
+            <div style="margin-bottom: 80px;">
+                <!-- 空白 -->
+            </div>
+
+            <div style="text-align: right;">
+                <a href="http://www.chem.kumamoto-u.ac.jp/~kucc/index.html">This website is operated by Sugimoto Laboratory, Kumamoto University.</a>
+              </div>
+              
+
+        </div>
+        <style>
+            .content {
+                margin: 0 auto; /* 水平方向に中央揃え */
+                width: 90%; /* 適切な幅を指定 */
+                   }
+        </style>
+    </div>
+    <!-- 共通のフッタ -->
+    <footer>
+
+        <div class="container">
+            <div style="text-align: right;">
+                <a href="#top">ページトップへ戻る</a>
+                <p>qwerty<sub>qwerty<sub>qwerty</sub><sup>qwerty</sup></sub></p>
+            </div>
+            
+           
+          </div>
+        
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 共通のJavaScriptファイルの読み込み -->
+</body>
+</html>
+
+

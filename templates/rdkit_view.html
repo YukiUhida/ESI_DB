@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block side %}
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'provide' %}">How to use</a>  
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'upload_esi' %}">Providing ESI descriptors</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'upload_rdkit' %}">Providing RDkit descriptors</a>  
+</li>
+
+
+
+{% endblock%}
+{% block content %}
+
+
+<div class="container" style="max-height: 300px; overflow: auto;">
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          {% for column in dataframe.columns %}
+            <th>{{ column }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for index, row in dataframe.iterrows %}
+          <tr>
+            {% for value in row %}
+              <td>{{ value }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}
+  

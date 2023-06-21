@@ -3,6 +3,26 @@
 {% block header %}
 {% endblock header %}
 
+{% block side %}
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'what_esi' %}">whats's ESI?</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'provide' %}">get descriptor</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'link_esi' %}">related links</a>
+</li>
+<div style="margin-bottom: 20px;">
+    <!-- 空白 -->
+</div>
+<p>If you have any questions about ESI or this website, please contact us at the email address below.</p>
+   <p style=" color: #d2691e;"> sugimoto@kumamoto-u.ac.jp</p>
+{% endblock%}
+
+
+
 {% block content %}
 
 <form action=" " method="POST">{% csrf_token %}

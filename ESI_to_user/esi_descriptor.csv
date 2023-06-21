@@ -1,0 +1,4 @@
+compd_name,smiles,compound_name,lpv,c_s0,s0_c,eav,a_s0,s0_a,stv,t1_s0,s0_t1,esolv,dm,vmol,b1,b2,b3
+"2,6-dichloro-N-pyridin-4-ylbenzamide",O=C(Nc1ccncc1)c1c(Cl)cccc1Cl,"2,6-dichloro-N-pyridin-4-ylbenzamide",9.00090709,0.34975985,0.33079814,-0.57339998,0.7597469,0.92660366,4.62108086,2.03512728,1.14455942,-0.37260838,5.9631,167.979,,,
+N-pyridin-4-ylbenzamide,O=C(Nc1ccncc1)c1ccccc1,N-pyridin-4-ylbenzamide,8.840427258,0.328787982,0.274675153,-0.289517176,0.347464823,0.360117557,4.489698972,1.583509614,0.611115794,-0.343112396,5.2098,142.783,,,
+2-chloro-N-pyridin-4-ylbenzamide,O=C(Nc1ccncc1)c1ccccc1Cl,2-chloro-N-pyridin-4-ylbenzamide,8.85214782,0.32532301,0.28090241,-0.10984618,0.36732428,0.42891257,4.44586134,0.53718949,0.51019482,-0.30038358,5.3339,153.937,,,

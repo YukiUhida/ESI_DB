@@ -1,0 +1,15 @@
+.block div{
+    border: none;
+  }
+  
+.inline a{
+    border: none;
+  }
+  
+.inline-block p{
+    display: inline-block;
+    border: none;
+  }
+.body {
+    background-color: red;
+}

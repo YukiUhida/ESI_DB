@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+
+<a href="{% url 'com_sql' %}" >検索結果を確認する</a>
+  

@@ -1,4 +1,20 @@
-{{ object.category }}
-{{ object.title }}
-{{ object.content }}
-{{ object.postdate }}
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+  
+<div class='container'>
+   <div class="card>"
+        <div class="card-body">
+          <h5 class="card-title">{{ object.compound_name }}</h5>
+          <p class="card-text">{{ object.smiles }}</p>
+          <a href="{% url 'list' %}" class="btn btn-primary">一覧へ</a>
+          <a href="{% url 'update' object.pk %}" class="btn btn-primary">更新する</a>
+          <a href="{% url 'delete' object.pk %}" class="btn btn-primary">削除する</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

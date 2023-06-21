@@ -1,0 +1,5 @@
+compd_name,SMILES
+"2,6-dichloro-N-pyridin-4-ylbenzamide",O=C(Nc1ccncc1)c1c(Cl)cccc1Cl
+N-pyridin-4-ylbenzamide,O=C(Nc1ccncc1)c1ccccc1
+2-chloro-N-pyridin-4-ylbenzamide,O=C(Nc1ccncc1)c1ccccc1Cl
+benzen,C1=CC=CC=C1

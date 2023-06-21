@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block side %}
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'provide' %}">How to use</a>  
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'upload_esi' %}">Providing ESI descriptors</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" href="{% url 'upload_rdkit' %}">Providing RDkit descriptors</a>  
+</li>
+{% endblock%}
+
+{% block content %}
+<div style="margin-bottom: 40px;"></div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      ESI記述子提供システム
+    </div>
+    <div class="card-body">
+      <h8 class="card-title">SMILESが記載されたCSVファイルを選択してください</h8>
+      <p class="card-text">
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="csv_file">
+          <button type="submit">アップロード</button>
+        </form>
+      </p>
+      {% if file_uploaded and csv_file_extension == 'csv' %}
+        <a href="{% url 'view_esi' %}" class="btn btn-primary">結果を表示・ダウンロードする</a>
+      {% else %}
+        <button type="button" class="btn btn-primary" disabled>結果を表示・ダウンロードする</button>
+      {% endif %}
+    </div>
+  </div>
+
+  <div style="margin-bottom: 40px;"></div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+{% endblock header %}
+
+{% block side %}
+<a class="nav-link active" href="{% url 'past_question' %}">Past questions</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact_form' %}">Contact form</a>
+</li>
+<div style="margin-bottom: 20px;">
+    <!-- 空白 -->
+</div>
+<p>If you have any questions about ESI or this website, please contact us at the email address below.</p>
+   <p style=" color: #d2691e;"> sugimoto@kumamoto-u.ac.jp</p>
+{% endblock%}
+
+
+
+{% block content %}
+  
+<div class='container'>
+   
+    
+    <div class="card">
+      <div class="card-header" >
+          <p style="font-size: 25px;">{{ object.question_title }}</p>
+      </div>
+      <div class="card-body">
+        
+        <h4>Question</h4>
+        <p class="card-text">{{ object.question }}</p>
+        <div style="margin-bottom: 20px;"></div>
+        <h4>Answer</h4>
+        <p class="card-text">{{ object.reply }}</p>
+      </div>
+      
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <!-- 空白 -->
+</div>
+
+{% endblock content %}

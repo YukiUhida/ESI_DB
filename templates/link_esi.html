@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block side %}
+<li class="nav-item">
+    <a class="nav-link active" href="{% url 'what_esi' %}">whats's ESI?</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'provide' %}">get descriptor</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'link_esi' %}">related links</a>
+</li>
+
+{% endblock%}
+
+
+
+{% block content %}
+<!-- ページ固有のコンテンツ -->
+{% load static %}
+
+<h1>Links to ralated pages</h1>
+
+
+<a href="http://www.chem.kumamoto-u.ac.jp/~kucc/index.html">Our Laboratory</a>
+{% endblock %}

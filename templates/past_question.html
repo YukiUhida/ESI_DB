@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block side %}
+<a class="nav-link active" href="{% url 'past_question' %}">Past questions</a>
+   
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'contact_form' %}">Contact form</a>
+</li>
+<div style="margin-bottom: 20px;">
+    <!-- 空白 -->
+</div>
+<p>If you have any questions about ESI or this website, please contact us at the email address below.</p>
+   <p style=" color: #d2691e;"> sugimoto@kumamoto-u.ac.jp</p>
+{% endblock%}
+
+
+<a href="{% url 'detail' item.pk %}" class="btn btn-primary">詳細へ</a>
+
+
+{% block content %}
+  <h1>Past Questions</h1>
+  {% for question in questions %}
+  <div style="margin-bottom: 30px;"></div>
+  
+  <div class="card">
+    <div class="card-header" >
+        <p style="font-size: 25px;"><a href="{% url 'question_detail' question.pk %}" >{{ question.question_title }}</a></p>
+    </div>
+    <div class="card-body">
+      <h4>Question</h4>
+      <p class="card-text">{{ question.question|slice:":200" }}</p>
+      <div style="margin-bottom: 20px;"></div>
+      <h4>Answer</h4>
+      <p class="card-text">{{ question.reply|slice:":200" }}</p>
+    </div>
+    
+  </div>
+  <div style="margin-bottom: 30px;"></div>
+  {% endfor %}
+  
+  
+  
+{% endblock %}
